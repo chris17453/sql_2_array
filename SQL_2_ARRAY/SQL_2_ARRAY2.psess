@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VSPerformanceSession Version="1.00">
+  <Options>
+    <Solution>SQL_2_ARRAY.sln</Solution>
+    <CollectionMethod>Instrumentation</CollectionMethod>
+    <AllocationMethod>None</AllocationMethod>
+    <Reportname>C:\Websites\SQL_PERF\SQL_2_ARRAY.vsp</Reportname>
+    <AddReport>true</AddReport>
+    <ResourceBasedAnalysisSelected>true</ResourceBasedAnalysisSelected>
+    <UniqueReport>Timestamp</UniqueReport>
+    <SamplingMethod>Cycles</SamplingMethod>
+    <CycleCount>10000000</CycleCount>
+    <PageFaultCount>10</PageFaultCount>
+    <SysCallCount>10</SysCallCount>
+    <SamplingCounter Name="" ReloadValue="00000000000f4240" DisplayName="" />
+    <RelocateBinaries>false</RelocateBinaries>
+    <HardwareCounters EnableHWCounters="false" />
+    <EtwSettings />
+    <PdhSettings>
+      <PdhCountersEnabled>false</PdhCountersEnabled>
+      <PdhCountersRate>500</PdhCountersRate>
+      <PdhCounters>
+        <PdhCounter>\Memory\Pages/sec</PdhCounter>
+        <PdhCounter>\PhysicalDisk(_Total)\Avg. Disk Queue Length</PdhCounter>
+        <PdhCounter>\Processor(_Total)\% Processor Time</PdhCounter>
+      </PdhCounters>
+    </PdhSettings>
+  </Options>
+  <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+  <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+  <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+  <PreinstrumentEvent>
+    <InstrEventExclude>false</InstrEventExclude>
+  </PreinstrumentEvent>
+  <PostinstrumentEvent>
+    <InstrEventExclude>false</InstrEventExclude>
+  </PostinstrumentEvent>
+  <Binaries>
+    <ProjBinary>
+      <Path>SQL_2_ARRAY\obj\x86\Debug\SQL_2_ARRAY.exe</Path>
+      <ArgumentTimestamp>01/01/0001 00:00:00</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <IsWindowsStoreApp>false</IsWindowsStoreApp>
+      <IsWWA>false</IsWWA>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <ExecutablePath>SQL_2_ARRAY\bin\Debug\SQL_2_ARRAY.exe</ExecutablePath>
+      <StartupDirectory>SQL_2_ARRAY\bin\Debug\</StartupDirectory>
+      <Arguments>-h -np -df -c of=C:\ccc\CCCONE\DATA\SQL\AMSupplier.sql name=AMSupplier ip=C:\ccc\CCCONE\DATA\VEHICLE\AM user=AMSupplier mode=sqlDump srcdb=AMSupplier destdb=CCC srctype=vistadb desttype=mysql</Arguments>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+      <ProjRef>{5391609F-AEC7-4DF2-A175-4F7C06D063D2}|SQL_2_ARRAY\SQL_2_ARRAY.csproj</ProjRef>
+      <ProjPath>SQL_2_ARRAY\SQL_2_ARRAY.csproj</ProjPath>
+      <ProjName>SQL_2_ARRAY</ProjName>
+    </ProjBinary>
+  </Binaries>
+  <Reports>
+    <Report>
+      <Path>C:\Websites\SQL_PERF\SQL_2_ARRAY130520(5).vsp</Path>
+    </Report>
+    <Report>
+      <Path>C:\Websites\SQL_PERF\SQL_2_ARRAY130520(6).vsp</Path>
+    </Report>
+    <Report>
+      <Path>C:\Websites\SQL_PERF\SQL_2_ARRAY130520(8).vsp</Path>
+    </Report>
+    <Report>
+      <Path>C:\Websites\SQL_PERF\SQL_2_ARRAY130520(2).vsp</Path>
+    </Report>
+    <Report>
+      <Path>C:\Websites\SQL_PERF\SQL_2_ARRAY130520(3).vsp</Path>
+    </Report>
+    <Report>
+      <Path>C:\Websites\SQL_PERF\SQL_2_ARRAY130520(9).vsp</Path>
+    </Report>
+    <Report>
+      <Path>C:\Websites\SQL_PERF\SQL_2_ARRAY130520(10).vsp</Path>
+    </Report>
+  </Reports>
+  <Launches>
+    <ProjBinary>
+      <Path>:PB:{5391609F-AEC7-4DF2-A175-4F7C06D063D2}|SQL_2_ARRAY\SQL_2_ARRAY.csproj</Path>
+    </ProjBinary>
+  </Launches>
+</VSPerformanceSession>

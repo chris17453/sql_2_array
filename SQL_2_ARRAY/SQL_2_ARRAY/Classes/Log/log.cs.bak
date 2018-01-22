@@ -1,0 +1,86 @@
+﻿using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+
+namespace dm {
+    public static class log{
+
+        public static void error(string location, string data) {
+            
+            System.IO.StreamWriter file = new System.IO.StreamWriter(SQL_2_ARRAY.Program.homePath+SQL_2_ARRAY.Program.appName+".log", true);
+            file.WriteLine("[" + location + "]"+DateTime.Now.ToLongTimeString());
+            
+            string[] tokens=data.Split('\r');
+            foreach(string token in tokens){
+                file.WriteLine(token);
+            }
+            file.Close();
+        }
+
+        public static void error(string location, Hashtable data) {
+            System.IO.StreamWriter file = new System.IO.StreamWriter(SQL_2_ARRAY.Program.homePath+SQL_2_ARRAY.Program.appName+".log", true);
+            file.WriteLine("[" + location + "]" + DateTime.Now.ToLongTimeString());
+            
+            foreach (DictionaryEntry d in data){
+                file.WriteLine(d.Key + ":" + d.Value);
+            }
+            file.Close();
+        }
+
+        public static void write(string data1, string data2) {
+            System.IO.StreamWriter file = new System.IO.StreamWriter(SQL_2_ARRAY.Program.homePath+SQL_2_ARRAY.Program.appName+".log", true);
+
+            string[] tokens=data2.Split('\r');
+            foreach(string token in tokens){
+                file.WriteLine("[" + data1 + "] " +DateTime.Now.ToLongTimeString()+"  =" + token);
+            }
+            
+            file.Close();
+        }
+        
+        public static void writeFile(string filePath, string data) {
+            System.IO.StreamWriter file = new System.IO.StreamWriter(filePath, true);
+
+            string[] tokens=data.Split('\r');
+            foreach(string token in tokens){
+                file.WriteLine(token);
+            }
+            file.Close();
+        }
+
+        public static void deleteFile(string filePath){
+            File.Delete(filePath);
+        }
+
+        public static void ConsoleMessage(string message){
+            Console.WriteLine(message);
+        }
+
+        public static void ConsoleMessage(string data1, string data2)
+        {
+            Console.ForegroundColor = System.ConsoleColor.Red;
+            Console.WriteLine("[" + data1 + "]");
+            Console.ResetColor();
+            data2 = data2.Replace("\r\n", "\n");
+            string[] temp = data2.Split('\n');
+            
+            foreach (string x in temp){
+                int width = 80 - 9;
+                int tlen = x.Length;
+                int end = width;
+                int start = 0;
+                while (start < tlen){
+                    if (start + width >= tlen) width = tlen - start;
+                    end = start + width;
+                    if (start == end) { start++; break; }
+                    string str = x.Substring(start, width);
+                    Console.WriteLine("        " + str);
+                    start += width;
+                }
+            }
+        }//end function
+    }
+}

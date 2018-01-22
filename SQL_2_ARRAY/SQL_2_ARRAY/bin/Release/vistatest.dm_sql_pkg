@@ -1,0 +1,16 @@
+[name]
+VistaDB
+[ip]
+C:\Users\jager314\Desktop\VEHICLE\DB STUFF
+[user]
+DR1GH99
+[password]
+7a48d22658aec71598f20f0b4e82e328926227
+[database]
+DR1GH99
+[type]
+VISTADB
+[destination]
+bob.txt
+[mode]
+sqlDump
